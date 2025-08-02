@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const API_BASE = "https://management-system-x82f.onrender.com";
+
 const Register = ({ onRegister, onSwitchToLogin }) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
