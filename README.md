@@ -2,7 +2,7 @@
 
 > A modern, full-stack task management application designed for efficient project organization and productivity tracking.
 
-**Live Demo**: [Add your deployed URL here]  
+**Live Demo**: [Configure with your deployed URL]  
 **Developer**: Saurabh  
 **Submission Date**: [Current Date]
 
@@ -94,14 +94,22 @@ task-management-system/
    npm run install-all
    ```
 
-3. **Start development servers**
+3. **Configure environment variables**
+   ```bash
+   # Create .env file in client directory
+   cd client
+   echo "REACT_APP_API_BASE_URL=your-api-url-here" > .env
+   cd ..
+   ```
+
+4. **Start development servers**
    ```bash
    npm run dev
    ```
 
-4. **Access the application**
+5. **Access the application**
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
+   - Backend API: [Your configured API URL]
 
 ### Manual Setup (Alternative)
 ```bash
@@ -116,10 +124,12 @@ cd ..
 # Setup frontend
 cd client
 npm install
+# Create environment file with your API URL
+echo "REACT_APP_API_BASE_URL=your-api-url-here" > .env
 cd ..
 
-# Start both servers
-npm run dev
+# Start development server
+npm run client
 ```
 
 ## 📖 Usage Guide
@@ -183,29 +193,45 @@ npm run dev
 
 ## 🚀 Deployment
 
-### Environment Variables
-Create a `.env` file in the server directory:
+### Current Deployment
+- **Backend**: Deployed on Render.com at https://management-system-x82f.onrender.com
+- **Database**: SQLite database hosted with the backend
+- **Frontend**: Can be deployed to any static hosting service
+
+### Environment Configuration
+The application uses environment variables for flexible deployment:
+
+**Client Environment Variables** (`.env` in client directory):
+```env
+REACT_APP_API_BASE_URL=your-deployed-backend-url
+```
+
+**Server Environment Variables**:
 ```env
 PORT=5000
 JWT_SECRET=your-super-secret-jwt-key
 NODE_ENV=production
 ```
 
-### Production Build
-```bash
-# Build frontend for production
-cd client
-npm run build
+### Deployment Steps
+1. **Deploy Backend** to your preferred platform (Render, Heroku, etc.)
+2. **Get Backend URL** from your deployment
+3. **Configure Frontend** environment variables with the backend URL
+4. **Deploy Frontend** to static hosting service
 
-# Start production server
-cd ../server
-npm start
+### Example Configuration
+```env
+# For production
+REACT_APP_API_BASE_URL=https://your-app-name.onrender.com
+
+# For development
+REACT_APP_API_BASE_URL=http://localhost:5000
 ```
 
-### Deployment Platforms
-- **Frontend**: Netlify, Vercel, GitHub Pages
-- **Backend**: Heroku, Railway, DigitalOcean
-- **Database**: Can be upgraded to PostgreSQL/MySQL for production
+### Alternative Deployment Platforms
+- **Frontend**: Netlify, Vercel, GitHub Pages, Surge
+- **Backend**: Heroku, Railway, DigitalOcean, AWS
+- **Database**: Can be upgraded to PostgreSQL/MySQL for production scale
 
 ## 🧪 Testing
 

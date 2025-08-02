@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { API_ENDPOINTS } from '../config/api';
 
-const API_BASE = "https://management-system-x82f.onrender.com";
+
 
 const Register = ({ onRegister, onSwitchToLogin }) => {
   const [username, setUsername] = useState('');
@@ -27,7 +28,7 @@ const Register = ({ onRegister, onSwitchToLogin }) => {
     setLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE}/api/auth/login`, {
+      const response = await fetch(API_ENDPOINTS.AUTH.REGISTER, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

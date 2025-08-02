@@ -3,6 +3,7 @@ import './App.css';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
+import { API_ENDPOINTS } from './config/api';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -27,7 +28,7 @@ function App() {
     if (!token) return;
 
     try {
-      const response = await fetch('/api/tasks', {
+      const response = await fetch(API_ENDPOINTS.TASKS.GET_ALL, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -63,7 +64,7 @@ function App() {
     if (!token) return;
 
     try {
-      const response = await fetch('/api/tasks', {
+      const response = await fetch(API_ENDPOINTS.TASKS.CREATE, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +87,7 @@ function App() {
     if (!token) return;
 
     try {
-      const response = await fetch(`/api/tasks/${id}`, {
+      const response = await fetch(API_ENDPOINTS.TASKS.UPDATE(id), {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -109,7 +110,7 @@ function App() {
     if (!token) return;
 
     try {
-      const response = await fetch(`/api/tasks/${id}`, {
+      const response = await fetch(API_ENDPOINTS.TASKS.DELETE(id), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
