@@ -1,16 +1,15 @@
-# Task Management System 📋
+# ManageIt 📋
 
 > A modern, full-stack task management application designed for efficient project organization and productivity tracking.
 
-**Live Demo**: [Configure with your deployed URL]  
+**Live Demo**:(https://management-system-he8d.vercel.app/)  
 **Developer**: Saurabh  
-**Submission Date**: [Current Date]
 
 ---
 
 ## 🎯 Project Overview
 
-The Task Management System is a comprehensive web application that enables users to create, organize, and track their tasks efficiently. Built with modern technologies and following industry best practices, this project demonstrates proficiency in full-stack development, database design, and user experience optimization.
+ManageIt is a comprehensive web application that enables users to create, organize, and track their tasks efficiently. Built with modern technologies and following industry best practices, this project demonstrates proficiency in full-stack development, database design, and user experience optimization.
 
 ## ✨ Key Features
 
@@ -106,10 +105,6 @@ task-management-system/
    ```bash
    npm run dev
    ```
-
-5. **Access the application**
-   - Frontend: http://localhost:3000
-   - Backend API: [Your configured API URL]
 
 ### Manual Setup (Alternative)
 ```bash
@@ -316,29 +311,11 @@ This project is open for improvements and suggestions:
 ## 📞 Contact Information
 
 **Developer**: Saurabh  
-**Email**: [your-email@example.com]  
-**LinkedIn**: [Your LinkedIn Profile]  
-**GitHub**: [Your GitHub Profile]  
-**Portfolio**: [Your Portfolio Website]
-
+**Email**: saurabhnarota1404@gmail.com 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- React.js team for the amazing framework
-- Express.js community for the robust backend solution
-- SQLite team for the lightweight database
-- All open-source contributors who made this project possible
-
----
-
 *Built with ❤️ for learning and demonstration purposes*
-
-**Last Updated**: [Current Date]  
-**Version**: 1.0.0  
-**Status**: Ready for Production
-

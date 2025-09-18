@@ -31,7 +31,7 @@ const Dashboard = ({
     <div className="dashboard">
       <header className="dashboard-header">
         <div className="header-content">
-          <h1>Task Management System</h1>
+          <h1>ManageIt</h1>
           <div className="user-info">
             <span>Welcome, {user.username}!</span>
             <button onClick={onLogout} className="logout-btn">Logout</button>
